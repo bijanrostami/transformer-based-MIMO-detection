@@ -115,7 +115,7 @@ if __name__ == "__main__":
     print("\n" + "=" * 50)
     print("Transformer-based Detector Training")
     print("=" * 50)
-    steps = 100000
+    steps = 500
     B = 256
     lr = 2e-4
 
