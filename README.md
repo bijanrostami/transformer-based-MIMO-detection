@@ -49,7 +49,7 @@ This project uses two datasets representing different mobility scenarios:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR-USERNAME/transformer-based-MIMO-detection.git
+git clone https://github.com/bijanrostami/transformer-based-MIMO-detection.git
 cd transformer-based-MIMO-detection
 ```
 
@@ -107,7 +107,7 @@ If you use this code in your research, please cite:
   author={Your Name},
   year={2026},
   publisher={GitHub},
-  howpublished={\url{https://github.com/YOUR-USERNAME/transformer-based-MIMO-detection}}
+  howpublished={\url{https://github.com/bijanrostami/transformer-based-MIMO-detection}}
 }
 ```
 
