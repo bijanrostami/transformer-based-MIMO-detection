@@ -1,6 +1,6 @@
 ﻿# Transformer-Based MIMO Detection
 
-[![Python Linting](https://github.com/YOUR-USERNAME/transformer-based-MIMO-detection/workflows/Python%20Linting/badge.svg)](https://github.com/YOUR-USERNAME/transformer-based-MIMO-detection/actions)
+[![Python Linting](https://github.com/bijanrostami/transformer-based-MIMO-detection/workflows/Python%20Linting/badge.svg)](https://github.com/bijanrostami/transformer-based-MIMO-detection/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository contains a transformer-based architecture for MU-MIMO detection. MIMO detection is implemented using a transformer to include the user channel dependencies and related coupling effects. The detector models user-to-user channel dependencies by forming a token per user (built from each user's channel vector and the matched-filter statistic), then uses self-attention to capture inter-user coupling before predicting per-user symbol logits.
