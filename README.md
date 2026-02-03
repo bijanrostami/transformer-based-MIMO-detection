@@ -65,15 +65,37 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+
 1. Update the dataset paths at the bottom of `MIMO_Detection.py`:
 
 ```python
-DATPerformance Comparison
+DATASET_LOW = ".../Low_Mob_pre_process_full.hdf5"
+DATASET_HIGH = ".../High_Mob_pre_process_full.hdf5"
+```
+
+2. Run the script:
+
+```bash
+python MIMO_Detection.py
+```
+
+The script will:
+- Load low/high mobility datasets
+- Sample a batch and compute ZF/MMSE baselines
+- Train the transformer-based detector
+- Report symbol error rates (SER)
+
+## Performance Comparison
 
 The script compares three detection methods:
 - **Zero Forcing (ZF)**: Linear detector that forces channel interference to zero
 - **MMSE**: Linear detector that minimizes mean square error with noise consideration
 - **Transformer Detector**: Neural network-based detector that learns to exploit channel dependencies
+
+## Notes
+- The script expects QPSK symbols and uses a fixed `M=4` classification head
+- `Cfg` controls the number of antennas/users, SNR, and device
+- The transformer-based detector is designed to capture user channel dependencies through attention over per-user tokens
 
 ## Citation
 
@@ -89,10 +111,6 @@ If you use this code in your research, please cite:
 }
 ```
 
-## Contributing
-
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -105,25 +123,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For questions or issues, please open an issue on GitHub or contact the maintainers
-```
-
-2. Run the script:
-
-```bash
-python MIMO_Detection.py
-```
-
-The script will:
-- load low/high mobility datasets
-- sample a batch and compute ZF/MMSE baselines
-- train the transformer-based detector
-- report symbol error rates (SER)
-
-## Notes
-- The script expects QPSK symbols and uses a fixed `M=4` classification head.
-- `Cfg` controls the number of antennas/users, SNR, and device.
-- The transformer-based detector is designed to capture user channel dependencies through attention over per-user tokens.
-
-## License
-Add a license file if you plan to release this publicly.
+For questions or issues, please open an issue on GitHub or contact the maintainers.
