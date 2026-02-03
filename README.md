@@ -97,20 +97,6 @@ The script compares three detection methods:
 - `Cfg` controls the number of antennas/users, SNR, and device
 - The transformer-based detector is designed to capture user channel dependencies through attention over per-user tokens
 
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@misc{transformer_mimo_detection,
-  title={Transformer-Based MIMO Detection},
-  author={Your Name},
-  year={2026},
-  publisher={GitHub},
-  howpublished={\url{https://github.com/bijanrostami/transformer-based-MIMO-detection}}
-}
-```
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
